@@ -1,8 +1,6 @@
 cask "neovim-nightly" do
   cmd = "git ls-remote git@github.com:neovim/neovim.git --tags nightly"
-  v = `#{cmd}`
-  version v
-  puts v
+  version `#{cmd}`[0..6]
 
   arch arm: "arm64", intel: "x86_64"
   url "https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-#{arch}.tar.gz",
