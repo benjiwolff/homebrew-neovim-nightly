@@ -1,5 +1,6 @@
 cask "neovim-nightly" do
-  v = system_command "git", args: ["git@github.com:neovim/neovim.git", "--tags", "nightly"]
+  cmd = "git remote-ls git@github.com:neovim/neovim.git --tags nightly"
+  v = `#{cmd}`
   version v
   puts v
 
