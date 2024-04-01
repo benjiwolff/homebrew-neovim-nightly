@@ -13,7 +13,7 @@ cask "neovim-nightly" do
 
   #depends_on
 
-  binary "bin/nvim"
+  binary "nvim-macos-#{arch}/bin/nvim"
 
   #zap
 end
