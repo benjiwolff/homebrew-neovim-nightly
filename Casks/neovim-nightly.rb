@@ -12,6 +12,7 @@ cask "neovim-nightly" do
   #livecheck
 
   #depends_on
+  conflicts_with formula: "neovim"
 
   binary "nvim-macos-#{arch}/bin/nvim"
 
