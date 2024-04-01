@@ -10,5 +10,10 @@ cask "neovim-nightly" do
 
   conflicts_with formula: "neovim"
 
-  binary "nvim-macos-#{arch}/bin/nvim"
+  bin_path = "nvim-macos-#{arch}/bin/nvim"
+  binary bin_path
+
+  postflight do
+    system_command "xattr", args: ["-c", "#{staged_path}/#{bin_path}"]
+  end
 end
