@@ -3,7 +3,7 @@ cask "neovim-nightly" do
 
   arch arm: "arm64", intel: "x86_64"
   url "https://github.com/neovim/neovim/releases/download/nightly/nvim-macos-#{arch}.tar.gz",
-      verified: "github.com/neovim/"
+      verified: "github.com/neovim"
   name "Neovim"
   desc "Vim-fork focused on extensibility and usability"
   homepage "https://neovim.io"
